@@ -1,0 +1,65 @@
+:root {
+  --paper: #fff6e5;
+  --dots: #f2dfbb;
+  --ink: #2b2b2b;
+  --card: #ffffff;
+  --box: #ffb703;
+  --box-dark: #f48c06;
+  --focus: #1971c2;
+  --tool: min(72px, calc((100vw - 52px) / 5));
+  --lift: 6px;
+  color-scheme: light;
+  font-family: ui-rounded, 'SF Pro Rounded', Nunito, 'Varela Round', 'Arial Rounded MT Bold', system-ui, sans-serif;
+  font-weight: 800;
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* touch-action stops at scroll containers, so set it everywhere: no double-tap zoom on crayons or thumbnails. */
+* {
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: radial-gradient(var(--dots) 1.6px, transparent 1.8px) 0 0 / 22px 22px, var(--paper);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 4px dashed var(--focus);
+  outline-offset: 4px;
+}
+
+/* Uses `rotate` (not transform) so it stacks with the crayon's `translate` lift. */
+@keyframes wiggle {
+  0%, 100% { rotate: 0deg; }
+  25% { rotate: -9deg; }
+  75% { rotate: 9deg; }
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

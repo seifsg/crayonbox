@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <title>Fruit Basket</title>
+  <g class="regions" fill="#ffffff" stroke="#2b2b2b" stroke-width="5" stroke-linejoin="round">
+    <rect x="3" y="3" width="594" height="594"/>
+    <rect x="30" y="30" width="130" height="130" rx="14"/>
+    <circle cx="95" cy="95" r="24"/>
+    <path d="M3 440 H597 V597 H3 Z"/>
+    <path d="M150 360 C110 300 120 240 160 200 L185 215 C155 250 155 300 185 345 Z"/>
+    <circle cx="180" cy="335" r="55"/>
+    <path d="M300 215 C318 215 325 240 330 262 C365 280 372 335 345 375 H255 C228 335 235 280 270 262 C275 240 282 215 300 215 Z"/>
+    <path d="M305 222 C320 190 360 185 372 195 C365 225 335 235 305 222 Z"/>
+    <circle cx="335" cy="355" r="46"/>
+    <path d="M188 270 C200 238 235 236 248 246 C243 272 213 282 188 270 Z"/>
+    <circle cx="430" cy="290" r="24"/>
+    <circle cx="478" cy="290" r="24"/>
+    <circle cx="526" cy="290" r="24"/>
+    <circle cx="454" cy="332" r="24"/>
+    <circle cx="502" cy="332" r="24"/>
+    <circle cx="478" cy="372" r="24"/>
+    <path d="M480 262 C490 215 540 205 560 215 C555 250 520 270 480 262 Z"/>
+    <path d="M140 400 H460 L425 555 Q420 575 400 575 H200 Q180 575 175 555 Z"/>
+    <rect x="125" y="380" width="350" height="40" rx="20"/>
+  </g>
+  <g class="ink" fill="none" stroke="#2b2b2b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 95 L138 95 M118.3 118.3 L125.4 125.4 M95 128 L95 138 M71.7 118.3 L64.6 125.4 M62 95 L52 95 M71.7 71.7 L64.6 64.6 M95 62 L95 52 M118.3 71.7 L125.4 64.6"/>
+    <path d="M180 282 q0 -18 8 -24 M300 215 q0 -15 10 -22"/>
+    <path d="M335 318 q5 -6 10 0"/>
+    <path d="M478 266 V245"/>
+    <path d="M195 430 v22 M235 430 v22 M275 430 v22 M315 430 v22 M355 430 v22 M395 430 v22 M215 470 v22 M255 470 v22 M295 470 v22 M335 470 v22 M375 470 v22 M235 510 v22 M275 510 v22 M315 510 v22 M355 510 v22"/>
+    <path d="M160 200 l-4 -12"/>
+  </g>
+</svg>

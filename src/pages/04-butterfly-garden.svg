@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <title>Butterfly Garden</title>
+  <g class="regions" fill="#ffffff" stroke="#2b2b2b" stroke-width="5" stroke-linejoin="round">
+    <rect x="3" y="3" width="594" height="594"/>
+    <circle cx="100" cy="90" r="45"/>
+    <path transform="translate(120 -20)" d="M330 130 A25 25 0 0 1 345 90 A35 35 0 0 1 405 75 A30 30 0 0 1 455 95 A22 22 0 0 1 470 130 Z"/>
+    <path d="M3 470 C150 440 300 490 450 455 C520 440 560 450 597 460 V597 H3 Z"/>
+    <path d="M85 545 C60 505 25 512 20 548 C50 565 75 562 85 545 Z"/>
+    <path d="M515 545 C540 505 575 512 580 548 C550 565 525 562 515 545 Z"/>
+    <path d="M300 570 C280 540 245 545 240 575 C265 590 290 585 300 570 Z"/>
+    <path d="M300 560 C320 530 355 535 360 565 C335 580 310 575 300 560 Z"/>
+    <circle cx="85" cy="386" r="21"/>
+    <circle cx="117.3" cy="409.5" r="21"/>
+    <circle cx="105" cy="447.5" r="21"/>
+    <circle cx="65" cy="447.5" r="21"/>
+    <circle cx="52.7" cy="409.5" r="21"/>
+    <circle cx="85" cy="420" r="20"/>
+    <circle cx="515" cy="386" r="21"/>
+    <circle cx="547.3" cy="409.5" r="21"/>
+    <circle cx="535" cy="447.5" r="21"/>
+    <circle cx="495" cy="447.5" r="21"/>
+    <circle cx="482.7" cy="409.5" r="21"/>
+    <circle cx="515" cy="420" r="20"/>
+    <circle cx="300" cy="446" r="21"/>
+    <circle cx="332.3" cy="469.5" r="21"/>
+    <circle cx="320" cy="507.5" r="21"/>
+    <circle cx="280" cy="507.5" r="21"/>
+    <circle cx="267.7" cy="469.5" r="21"/>
+    <circle cx="300" cy="480" r="20"/>
+    <path d="M292 245 C260 160 150 130 115 185 C95 235 170 275 292 262 Z"/>
+    <path d="M308 245 C340 160 450 130 485 185 C505 235 430 275 308 262 Z"/>
+    <path d="M292 270 C200 275 150 320 170 370 C195 410 270 380 292 300 Z"/>
+    <path d="M308 270 C400 275 450 320 430 370 C405 410 330 380 308 300 Z"/>
+    <circle cx="185" cy="200" r="26"/>
+    <circle cx="415" cy="200" r="26"/>
+    <circle cx="215" cy="350" r="22"/>
+    <circle cx="385" cy="350" r="22"/>
+    <ellipse cx="300" cy="265" rx="17" ry="78"/>
+    <circle cx="300" cy="185" r="20"/>
+  </g>
+  <g class="ink" fill="none" stroke="#2b2b2b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M158 90 L176 90 M141 131 L153.7 143.7 M100 148 L100 166 M59 131 L46.3 143.7 M42 90 L24 90 M59 49 L46.3 36.3 M100 32 L100 14 M141 49 L153.7 36.3"/>
+    <path d="M85 477 V560 M515 477 V560 M300 535 V590"/>
+    <circle cx="293" cy="182" r="4" fill="#2b2b2b"/>
+    <circle cx="307" cy="182" r="4" fill="#2b2b2b"/>
+    <path d="M293 192 q7 6 14 0 M292 168 q-15 -30 -35 -38 M308 168 q15 -30 35 -38"/>
+    <path d="M130 520 l8 -16 l8 16 M440 540 l8 -16 l8 16 M190 560 l8 -16 l8 16 M400 585 l8 -16 l8 16"/>
+  </g>
+</svg>

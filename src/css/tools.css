@@ -1,0 +1,58 @@
+/* Chunky sticker buttons that squish when pressed. */
+.tool {
+  flex: none;
+  width: var(--tool);
+  height: var(--tool);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 4px solid var(--ink);
+  border-radius: 22px;
+  background: var(--c, var(--card));
+  box-shadow: 0 var(--lift) 0 var(--ink);
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.08s, opacity 0.2s;
+}
+
+.tool svg {
+  width: 50%;
+  height: 50%;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tool:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 calc(var(--lift) - 4px) 0 var(--ink);
+}
+
+.tool:disabled {
+  opacity: 0.5;
+  filter: saturate(0.35);
+  cursor: default;
+}
+
+#pages { --c: #a5d8ff; }
+#undo { --c: #ffd60a; }
+#clear { --c: #ff8fab; }
+#save { --c: #8ce99a; }
+#print { --c: #e0aaff; }
+
+/* Sideways phones: five tools must fit the height (safe areas included), up to 64 px each; the logo makes room. */
+@media (orientation: landscape) and (max-height: 520px) {
+  :root {
+    --tool: min(64px, calc((100dvh - 48px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) / 5));
+    --lift: 4px;
+  }
+
+  .tools {
+    gap: 6px;
+  }
+
+  .tools .brand {
+    display: none;
+  }
+}

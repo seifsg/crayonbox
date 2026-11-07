@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <title>Desert Camel</title>
+  <g class="regions" fill="#ffffff" stroke="#2b2b2b" stroke-width="5" stroke-linejoin="round">
+    <rect x="3" y="3" width="594" height="594"/>
+    <circle cx="510" cy="95" r="45"/>
+    <path d="M220 130 A25 25 0 0 1 235 90 A35 35 0 0 1 295 75 A30 30 0 0 1 345 95 A22 22 0 0 1 360 130 Z"/>
+    <path d="M3 380 C120 330 250 340 340 390 C430 350 520 340 597 370 V597 H3 Z"/>
+    <path d="M3 470 C150 440 330 480 597 455 V597 H3 Z"/>
+    <path d="M100 205 C95 280 90 360 80 470 L120 470 C118 360 118 280 120 205 Z"/>
+    <path d="M110 200 C80 170 40 180 22 240 C50 215 80 210 110 200 Z"/>
+    <path d="M110 200 C140 170 180 180 198 240 C170 215 140 210 110 200 Z"/>
+    <path d="M110 200 C95 150 60 130 35 140 C70 170 95 185 110 200 Z"/>
+    <path d="M110 200 C125 150 160 130 185 140 C150 170 125 185 110 200 Z"/>
+    <ellipse cx="150" cy="540" rx="95" ry="30"/>
+    <rect x="240" y="370" width="26" height="135" rx="12"/>
+    <rect x="280" y="370" width="26" height="135" rx="12"/>
+    <rect x="380" y="370" width="26" height="135" rx="12"/>
+    <rect x="420" y="370" width="26" height="135" rx="12"/>
+    <path d="M220 380 C210 320 240 290 270 300 C290 230 370 230 385 300 C420 300 445 320 440 360 C440 395 410 405 370 405 L270 405 C240 405 225 395 220 380 Z"/>
+    <path d="M290 300 C300 268 355 268 365 300 L372 345 L283 345 Z"/>
+    <path d="M415 345 C440 300 445 260 465 228 L493 240 C475 275 468 315 440 362 Z"/>
+    <ellipse cx="505" cy="225" rx="38" ry="25" transform="rotate(10 505 225)"/>
+    <ellipse cx="540" cy="240" rx="20" ry="17"/>
+  </g>
+  <g class="ink" fill="none" stroke="#2b2b2b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M510 35 V20 M552 53 L563 42 M570 95 H585 M552 137 L563 148 M468 53 L457 42 M450 95 H435"/>
+    <path d="M482 207 q-4 -14 8 -16"/>
+    <circle cx="512" cy="218" r="5" fill="#2b2b2b"/>
+    <circle cx="550" cy="234" r="3" fill="#2b2b2b"/>
+    <path d="M530 249 q8 7 16 0"/>
+    <path d="M222 350 q-22 20 -12 50"/>
+    <path d="M292 345 v12 M310 345 v12 M328 345 v12 M346 345 v12 M364 345 v12"/>
+    <path d="M105 535 q15 -6 30 0 M160 550 q15 -6 30 0"/>
+    <path d="M470 520 l8 -16 l8 16 M540 560 l8 -16 l8 16 M290 560 l8 -16 l8 16"/>
+  </g>
+</svg>

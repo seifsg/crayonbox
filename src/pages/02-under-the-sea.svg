@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <title>Under the Sea</title>
+  <g class="regions" fill="#ffffff" stroke="#2b2b2b" stroke-width="5" stroke-linejoin="round">
+    <rect x="3" y="3" width="594" height="594"/>
+    <path d="M25 520 C-5 450 55 420 30 350 C20 320 30 295 50 275 C95 310 80 350 100 390 C120 430 85 470 115 520 Z"/>
+    <path transform="translate(600 0) scale(-1 1)" d="M25 520 C-5 450 55 420 30 350 C20 320 30 295 50 275 C95 310 80 350 100 390 C120 430 85 470 115 520 Z"/>
+    <path d="M185 520 C160 470 215 450 198 410 C192 390 200 372 218 360 C250 392 238 412 258 445 C275 475 245 492 270 520 Z"/>
+    <path d="M290 215 L355 160 L355 270 Z"/>
+    <path d="M180 172 Q210 118 255 176 Z"/>
+    <ellipse cx="210" cy="215" rx="80" ry="52"/>
+    <path d="M385 345 L330 305 L330 385 Z"/>
+    <path d="M405 312 Q432 262 470 316 Z"/>
+    <ellipse cx="430" cy="345" rx="55" ry="38"/>
+    <path d="M520 150 L578 108 L578 192 Z"/>
+    <path d="M450 132 Q480 70 520 132 Z"/>
+    <ellipse cx="480" cy="150" rx="55" ry="36"/>
+    <circle cx="60" cy="95" r="30"/>
+    <circle cx="105" cy="165" r="22"/>
+    <circle cx="330" cy="85" r="24"/>
+    <circle cx="400" cy="230" r="22"/>
+    <circle cx="540" cy="235" r="22"/>
+    <path d="M3 505 C120 475 220 520 330 495 C440 470 520 500 597 485 V597 H3 Z"/>
+    <polygon points="305,503 316.2,532.6 347.8,534.1 323.1,553.9 331.5,584.4 305,567 278.5,584.4 286.9,553.9 262.2,534.1 293.8,532.6"/>
+    <path d="M365 575 Q365 505 410 505 Q455 505 455 575 Z"/>
+  </g>
+  <g class="ink" fill="none" stroke="#2b2b2b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="162" cy="205" r="5" fill="#2b2b2b"/>
+    <circle cx="455" cy="333" r="5" fill="#2b2b2b"/>
+    <circle cx="445" cy="142" r="5" fill="#2b2b2b"/>
+    <path d="M146 232 q14 12 28 0 M185 195 q-10 25 0 50"/>
+    <path d="M452 357 q12 10 24 0 M405 325 q10 20 0 40"/>
+    <path d="M432 165 q14 10 28 0 M472 135 q-10 15 0 30"/>
+    <path d="M43.5 95 A16.5 16.5 0 0 1 60 78.5 M92.9 165 A12.1 12.1 0 0 1 105 152.9 M316.8 85 A13.2 13.2 0 0 1 330 71.8 M387.9 230 A12.1 12.1 0 0 1 400 217.9 M527.9 235 A12.1 12.1 0 0 1 540 222.9"/>
+    <circle cx="298" cy="541" r="4" fill="#2b2b2b"/>
+    <circle cx="312" cy="541" r="4" fill="#2b2b2b"/>
+    <path d="M299 553 q7 6 14 0"/>
+    <path d="M410 568 V525 M385 568 L388 530 M435 568 L432 530"/>
+    <path d="M150 585 l8 -16 l8 16 l8 -16 l8 16"/>
+  </g>
+</svg>

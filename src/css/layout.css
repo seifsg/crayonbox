@@ -1,0 +1,95 @@
+/* Portrait: tools on top, page, crayon tray below. Landscape: tools | page | crayon box. */
+.app {
+  height: 100dvh;
+  display: grid;
+  grid-template: 'tools' auto 'stage' minmax(0, 1fr) 'box' auto / minmax(0, 1fr);
+  gap: 12px;
+  padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom))
+    max(10px, env(safe-area-inset-left));
+}
+
+.tools {
+  grid-area: tools;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand {
+  display: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+.stage {
+  grid-area: stage;
+  display: grid;
+  place-items: center;
+  container-type: size;
+  min-height: 0;
+}
+
+/* The page card: a white mat with a sticker edge, always square and as big as the stage allows. */
+.paper {
+  width: calc(min(100cqw, 100cqh) - var(--lift) - 4px);
+  aspect-ratio: 1;
+  padding: clamp(6px, 2cqmin, 14px);
+  background: var(--card);
+  border: 4px solid var(--ink);
+  border-radius: 26px;
+  box-shadow: 0 var(--lift) 0 var(--ink);
+}
+
+.art,
+.art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.art .regions > * {
+  cursor: pointer;
+  transition: fill 0.15s ease-out;
+}
+
+.art .ink {
+  pointer-events: none;
+}
+
+.box {
+  grid-area: box;
+  min-width: 0;
+}
+
+@media (orientation: landscape) and (min-width: 560px) {
+  .app {
+    grid-template: 'tools stage box' minmax(0, 1fr) / auto minmax(0, 1fr) auto;
+    gap: 16px;
+  }
+
+  .tools {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-y: auto;
+    padding-bottom: var(--lift);
+  }
+
+  .brand {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 600px) and (orientation: portrait) {
+  .tools {
+    gap: 16px;
+  }
+
+  .brand {
+    display: block;
+    margin-right: 8px;
+  }
+}

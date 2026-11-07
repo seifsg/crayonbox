@@ -30,7 +30,8 @@
 }
 
 .tool:disabled {
-  opacity: 0.55;
+  opacity: 0.5;
+  filter: saturate(0.35);
   cursor: default;
 }
 

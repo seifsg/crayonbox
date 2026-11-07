@@ -105,7 +105,7 @@
 }
 
 /* Landscape: a tall box beside the page, crayons spread over its height, scrolling only on short screens. */
-@media (orientation: landscape) and (min-width: 700px) {
+@media (orientation: landscape) and (min-width: 560px) {
   .box {
     --cols: 4;
     --crayon-h: 76px;
@@ -128,8 +128,8 @@
   }
 }
 
-/* 36 crayons: 4 x 9 when tall enough, else 6 x 6 (scrolls on short phones). */
-@media (orientation: landscape) and (min-width: 700px) and (max-height: 700px) {
+/* 36 crayons: 4 x 9 when tall enough; 6 x 6 on wide short screens; small sideways phones keep 4 columns so the page stays big. */
+@media (orientation: landscape) and (min-width: 900px) and (max-height: 700px) {
   .box {
     --cols: 6;
   }

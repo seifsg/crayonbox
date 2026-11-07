@@ -63,7 +63,7 @@
   min-width: 0;
 }
 
-@media (orientation: landscape) and (min-width: 700px) {
+@media (orientation: landscape) and (min-width: 560px) {
   .app {
     grid-template: 'tools stage box' minmax(0, 1fr) / auto minmax(0, 1fr) auto;
     gap: 16px;

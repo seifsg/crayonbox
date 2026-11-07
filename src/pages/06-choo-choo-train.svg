@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <title>Choo-Choo Train</title>
+  <g class="regions" fill="#ffffff" stroke="#2b2b2b" stroke-width="5" stroke-linejoin="round">
+    <rect x="3" y="3" width="594" height="594"/>
+    <circle cx="520" cy="95" r="40"/>
+    <path transform="translate(-310 -10)" d="M330 130 A25 25 0 0 1 345 90 A35 35 0 0 1 405 75 A30 30 0 0 1 455 95 A22 22 0 0 1 470 130 Z"/>
+    <circle cx="490" cy="298" r="22"/>
+    <circle cx="450" cy="262" r="27"/>
+    <circle cx="400" cy="228" r="32"/>
+    <path d="M3 470 C30 330 190 310 300 470 Z"/>
+    <path d="M420 470 C470 400 560 380 597 420 V470 Z"/>
+    <path d="M180 470 C240 360 420 340 520 470 Z"/>
+    <path d="M3 470 H597 V597 H3 Z"/>
+    <rect x="3" y="495" width="594" height="30"/>
+    <rect x="20" y="390" width="130" height="90" rx="8"/>
+    <rect x="35" y="405" width="45" height="45" rx="6"/>
+    <rect x="90" y="405" width="45" height="45" rx="6"/>
+    <circle cx="197" cy="385" r="22"/>
+    <circle cx="240" cy="385" r="22"/>
+    <circle cx="283" cy="385" r="22"/>
+    <rect x="175" y="390" width="130" height="90" rx="8"/>
+    <rect x="215" y="415" width="50" height="45" rx="6"/>
+    <path d="M490 392 L498 345 L492 330 H548 L542 345 L550 392 Z"/>
+    <rect x="430" y="385" width="120" height="95" rx="30"/>
+    <rect x="360" y="330" width="85" height="150"/>
+    <rect x="350" y="312" width="105" height="25" rx="8"/>
+    <rect x="378" y="355" width="50" height="50" rx="8"/>
+    <path d="M545 440 L580 490 L545 490 Z"/>
+    <circle cx="60" cy="495" r="24"/>
+    <circle cx="120" cy="495" r="24"/>
+    <circle cx="215" cy="495" r="24"/>
+    <circle cx="265" cy="495" r="24"/>
+    <circle cx="405" cy="485" r="32"/>
+    <circle cx="475" cy="495" r="21"/>
+    <circle cx="518" cy="495" r="21"/>
+  </g>
+  <g class="ink" fill="none" stroke="#2b2b2b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M572 95 L588 95 M556.8 131.8 L568.1 143.1 M520 147 L520 163 M483.2 131.8 L471.9 143.1 M468 95 L452 95 M483.2 58.2 L471.9 46.9 M520 43 L520 27 M556.8 58.2 L568.1 46.9"/>
+    <path d="M150 450 H175 M305 450 H360"/>
+    <path d="M35 505 v10 M70 505 v10 M105 505 v10 M140 505 v10 M175 505 v10 M210 505 v10 M245 505 v10 M280 505 v10 M315 505 v10 M350 505 v10 M385 505 v10 M420 505 v10 M455 505 v10 M490 505 v10 M525 505 v10 M560 505 v10"/>
+    <circle cx="60" cy="495" r="5" fill="#2b2b2b"/>
+    <circle cx="120" cy="495" r="5" fill="#2b2b2b"/>
+    <circle cx="215" cy="495" r="5" fill="#2b2b2b"/>
+    <circle cx="265" cy="495" r="5" fill="#2b2b2b"/>
+    <circle cx="405" cy="485" r="5" fill="#2b2b2b"/>
+    <circle cx="475" cy="495" r="5" fill="#2b2b2b"/>
+    <circle cx="518" cy="495" r="5" fill="#2b2b2b"/>
+    <path d="M60 560 l8 -16 l8 16 M300 575 l8 -16 l8 16 M520 560 l8 -16 l8 16 M180 550 l8 -16 l8 16"/>
+  </g>
+</svg>

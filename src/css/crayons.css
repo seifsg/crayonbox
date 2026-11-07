@@ -47,10 +47,11 @@
 .crayon::after {
   content: '';
   position: absolute;
-  inset: auto -3px 0;
-  height: 24%;
+  inset: auto -2px 0;
+  height: 21%;
   background: var(--card-lines), var(--box-dark);
   border-top: 3px solid var(--ink);
+  box-shadow: inset 2px 0 0 rgb(43 43 43 / 0.5), inset -2px 0 0 rgb(43 43 43 / 0.5);
   pointer-events: none;
 }
 

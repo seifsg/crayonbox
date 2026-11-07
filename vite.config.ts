@@ -10,8 +10,8 @@ export default defineConfig({
   build: { target: 'es2022' },
   plugins: [
     VitePWA({
+      // autoUpdate + the default injectRegister: the new worker takes over at once, so an update never waits on closed tabs.
       registerType: 'autoUpdate',
-      injectRegister: 'script',
       includeAssets: ['icons/icon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
         name: 'Crayonbox',

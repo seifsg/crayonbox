@@ -1,0 +1,36 @@
+/* Print only the page art, as big as one sheet allows. */
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    height: auto;
+    overflow: visible;
+    background: none;
+  }
+
+  .tools,
+  .box,
+  .picker {
+    display: none !important;
+  }
+
+  .app,
+  .stage {
+    display: block;
+    height: auto;
+    padding: 0;
+    container-type: normal;
+  }
+
+  .paper {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}

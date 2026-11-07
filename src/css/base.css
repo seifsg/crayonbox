@@ -13,11 +13,12 @@
   font-weight: 800;
   color: var(--ink);
   -webkit-text-size-adjust: 100%;
-  touch-action: manipulation;
 }
 
+/* touch-action stops at scroll containers, so set it everywhere: no double-tap zoom on crayons or thumbnails. */
 * {
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 html,

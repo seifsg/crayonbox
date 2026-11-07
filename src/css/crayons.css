@@ -1,12 +1,20 @@
-/* The open crayon box: a tray of 36 crayons; the chosen one slides up and wiggles. */
+/* The open crayon box: a tray of 36 crayons; the chosen one pops up, glows and wiggles. */
 .box {
   --rows: 2;
+  --fade: rgb(43 43 43 / 0.45);
+  display: grid;
   overflow-x: auto;
   overflow-y: hidden;
-  background: var(--box);
+  /* Scroll hint: a soft shadow shows on whichever side still has crayons hidden. */
+  background:
+    linear-gradient(to right, var(--box) 40%, transparent) left / 32px 100% no-repeat local,
+    linear-gradient(to left, var(--box) 40%, transparent) right / 32px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--fade), transparent) left / 22px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--fade), transparent) right / 22px 100% no-repeat scroll,
+    var(--box);
   border: 4px solid var(--ink);
   border-radius: 24px;
-  box-shadow: 0 var(--lift) 0 var(--ink), inset 0 -10px 0 var(--box-dark);
+  box-shadow: 0 var(--lift) 0 var(--ink), inset 0 -10px 0 var(--box-dark), inset 0 8px 0 rgb(0 0 0 / 0.08);
   scrollbar-width: thin;
   scrollbar-color: var(--ink) transparent;
   overscroll-behavior: contain;
@@ -20,10 +28,11 @@
   gap: 2px 4px;
   width: max-content;
   margin-inline: auto;
-  padding: 14px 10px 8px;
+  padding: 22px 12px 10px;
 }
 
 .crayon {
+  position: relative;
   width: 56px;
   height: var(--crayon-h, 80px);
   padding: 8px 0 0;
@@ -56,12 +65,13 @@
 }
 
 .crayon[aria-pressed='true'] {
-  transform: translateY(-12px);
+  z-index: 1;
+  transform: translateY(-16px) scale(1.12);
 }
 
 .crayon[aria-pressed='true'] svg {
   animation: wiggle 0.45s ease-in-out;
-  filter: drop-shadow(0 6px 0 rgb(0 0 0 / 0.25));
+  filter: drop-shadow(0 0 0 #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 8px 0 rgb(0 0 0 / 0.3));
 }
 
 @media (orientation: portrait) and (min-height: 740px) {
@@ -70,7 +80,13 @@
   }
 }
 
-/* Landscape: a tall box beside the page, scrolling down if the screen is short. */
+@media (orientation: portrait) and (min-height: 800px) {
+  .box {
+    --crayon-h: 88px;
+  }
+}
+
+/* Landscape: a tall box beside the page, crayons spread over its height, scrolling only on short screens. */
 @media (orientation: landscape) and (min-width: 700px) {
   .box {
     --cols: 4;
@@ -79,14 +95,15 @@
     overflow-y: auto;
     scrollbar-width: none;
     background: linear-gradient(to right, var(--box) calc(100% - 14px), var(--box-dark) calc(100% - 14px));
-    box-shadow: 0 var(--lift) 0 var(--ink);
+    box-shadow: 0 var(--lift) 0 var(--ink), inset 6px 0 0 rgb(0 0 0 / 0.08);
   }
 
   .crayons {
     grid-auto-flow: row;
     grid-template-rows: none;
     grid-template-columns: repeat(var(--cols), auto);
-    padding: 16px 20px 10px 8px;
+    align-content: space-evenly;
+    padding: 16px 22px 10px 10px;
   }
 }
 

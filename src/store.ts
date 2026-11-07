@@ -10,6 +10,7 @@ const warn = (what: string, e: unknown): void => {
   warned = true;
 };
 
+/** Storage read that never throws. */
 const read = (key: string): string | null => {
   try {
     return localStorage.getItem(PREFIX + key);
@@ -19,6 +20,7 @@ const read = (key: string): string | null => {
   }
 };
 
+/** Storage write that never throws. */
 const write = (key: string, value: string): void => {
   try {
     localStorage.setItem(PREFIX + key, value);
@@ -27,6 +29,7 @@ const write = (key: string, value: string): void => {
   }
 };
 
+/** JSON parse that turns junk into null (a blank page). */
 const parse = (text: string | null): unknown => {
   try {
     return text === null ? null : JSON.parse(text);

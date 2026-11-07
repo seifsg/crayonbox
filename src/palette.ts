@@ -17,8 +17,10 @@ export const CRAYONS: readonly Crayon[] = ([
 ] as const).map(([hex, name]) => ({ hex, name }));
 
 export const DEFAULT_COLOR = '#e63946';
-export const isCrayon = (hex: string | null): hex is string => CRAYONS.some((c) => c.hex === hex);
+/** True for a color in the box, so a stale saved choice never selects nothing. */
+export const isCrayon =(hex: string | null): hex is string => CRAYONS.some((c) => c.hex === hex);
 
+/** One crayon drawing: tip, body and a darker paper wrapper. */
 const crayonSvg = (hex: string): string =>
   `<svg viewBox="0 0 40 72" aria-hidden="true"><path class="tip" d="M13 6Q20 0 27 6L34 22H6Z" fill="${hex}"/>` +
   `<rect x="6" y="20" width="28" height="48" rx="5" fill="${hex}"/><rect class="wrap" x="6" y="32" width="28" height="22"/></svg>`;

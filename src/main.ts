@@ -11,6 +11,7 @@ import { bindPickerClose, openPicker } from './picker.ts';
 import { Sheet, type Edit } from './sheet.ts';
 import { loadColors, loadPref, saveColors, savePref } from './store.ts';
 
+/** Required element lookup: a missing one is a broken page, so fail loudly. */
 const $ = <T extends Element>(selector: string): T => {
   const found = document.querySelector<T>(selector);
   if (!found) throw new Error(`crayonbox: missing ${selector}`);
@@ -25,6 +26,7 @@ const picker = $<HTMLDialogElement>('#picker');
 
 // One sheet per page for the whole visit, so Undo history survives switching pages.
 const sheets = new Map<string, Sheet>();
+/** The page's sheet, loaded from storage the first time it is needed. */
 const sheetOf = (page: Page, n: number): Sheet => {
   const known = sheets.get(page.id);
   if (known) return known;
@@ -39,6 +41,7 @@ let sheet: Sheet;
 const savedColor = loadPref('color');
 let color = isCrayon(savedColor) ? savedColor : DEFAULT_COLOR;
 
+/** Undo/Clear only light up when they can do something. */
 const sync = (): void => {
   undoBtn.disabled = !sheet.canUndo;
   clearBtn.disabled = sheet.isBlank;
@@ -52,6 +55,7 @@ const draw = (edits: readonly Edit[]): void => {
   sync();
 };
 
+/** Shows a page with its saved colors and remembers it for next time. */
 const open = (next: Page): void => {
   page = next;
   regions = mount(art, next);
@@ -61,6 +65,7 @@ const open = (next: Page): void => {
   sync();
 };
 
+/** Chooses a crayon and remembers it. */
 const pick = (hex: string): void => {
   color = hex;
   app.style.setProperty('--current', hex);
@@ -77,8 +82,12 @@ art.addEventListener('click', (e) => {
 });
 undoBtn.addEventListener('click', undo);
 clearBtn.addEventListener('click', () => draw(sheet.clear()));
-$('#save').addEventListener('click', () => {
-  savePng($<SVGSVGElement>('#art svg'), `crayonbox-${page.id}`).catch((e: unknown) => console.error('crayonbox: save failed', e));
+const saveBtn = $<HTMLButtonElement>('#save');
+saveBtn.addEventListener('click', () => {
+  savePng($<SVGSVGElement>('#art svg'), `crayonbox-${page.id}`).catch((e: unknown) => {
+    console.error('crayonbox: save failed', e);
+    saveBtn.animate({ translate: ['0', '-8px', '8px', '0'] }, 300); // a "no" shake: kids can't read errors
+  });
 });
 $('#print').addEventListener('click', printPage);
 $('#pages').addEventListener('click', () => openPicker(picker, page, (p, n) => sheetOf(p, n).colors, open));

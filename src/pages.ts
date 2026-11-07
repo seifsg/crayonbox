@@ -9,6 +9,7 @@ export interface Page {
 // Every page ships inside the bundle, so the service worker precaches them all and paging needs no network.
 const files = import.meta.glob<string>('./pages/*.svg', { query: '?raw', import: 'default', eager: true });
 
+/** File path + raw SVG → page; a page without a <title> is a broken file. */
 const toPage = ([path, svg]: [string, string]): Page => {
   const id = path.slice(path.lastIndexOf('/') + 1, -'.svg'.length);
   const title = /<title>([^<]+)<\/title>/.exec(svg)?.[1];

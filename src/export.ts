@@ -17,17 +17,21 @@ const toPng = async (svg: SVGSVGElement): Promise<Blob> => {
   return new Promise((done, fail) => canvas.toBlob((b) => (b ? done(b) : fail(new Error('save: PNG encode failed'))), 'image/png'));
 };
 
-/** Phones and tablets get the share sheet (Save Image → Photos); everything else downloads the file. */
+/** Phones and tablets get the share sheet (Save Image → Photos). False = not shared, so the caller downloads instead. */
 const share = async (file: File): Promise<boolean> => {
   if (!matchMedia('(pointer: coarse)').matches || !navigator.canShare?.({ files: [file] })) return false;
   try {
     await navigator.share({ files: [file] });
+    return true;
   } catch (e) {
-    if ((e as Error).name !== 'AbortError') throw e;
+    // AbortError = the child closed the sheet. Anything else (e.g. tap activation expired) falls back to download.
+    if ((e as Error).name === 'AbortError') return true;
+    console.warn('crayonbox: share failed, downloading instead', e);
+    return false;
   }
-  return true;
 };
 
+/** Saves the file through a temporary link; the URL is freed once the browser has it. */
 const download = (file: File): void => {
   const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(file), download: file.name });
   a.click();
@@ -40,4 +44,5 @@ export const savePng = async (svg: SVGSVGElement, name: string): Promise<void> =
   if (!(await share(file))) download(file);
 };
 
+/** Opens the print dialog; print CSS leaves only the page art. */
 export const printPage = (): void => window.print();

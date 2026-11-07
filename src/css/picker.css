@@ -30,9 +30,9 @@
 
 .thumbs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(150px, 40vw), 1fr));
-  gap: 18px;
-  padding: 10px 20px 26px;
+  grid-template-columns: repeat(auto-fill, minmax(min(150px, 36vw), 1fr));
+  gap: clamp(12px, 2vw, 18px);
+  padding: 10px clamp(14px, 3vw, 20px) 26px;
   overflow-y: auto;
 }
 

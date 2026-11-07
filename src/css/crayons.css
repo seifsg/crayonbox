@@ -77,6 +77,7 @@
     --crayon-h: 72px;
     overflow-x: hidden;
     overflow-y: auto;
+    scrollbar-width: none;
     background: linear-gradient(to right, var(--box) calc(100% - 14px), var(--box-dark) calc(100% - 14px));
     box-shadow: 0 var(--lift) 0 var(--ink);
   }

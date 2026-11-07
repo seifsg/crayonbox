@@ -74,6 +74,7 @@ const pick = (hex: string): void => {
 };
 const select = renderPalette($('#crayons'), pick);
 
+/** Steps the current page back once. */
 const undo = (): void => draw(sheet.undo());
 
 art.addEventListener('click', (e) => {
@@ -93,7 +94,8 @@ $('#print').addEventListener('click', printPage);
 $('#pages').addEventListener('click', () => openPicker(picker, page, (p, n) => sheetOf(p, n).colors, open));
 bindPickerClose(picker);
 document.addEventListener('keydown', (e) => {
-  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+  // Not while the picker is open: the page behind it would change unseen.
+  if (!picker.open && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
     e.preventDefault();
     undo();
   }

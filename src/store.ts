@@ -48,9 +48,13 @@ export const normalize = (raw: unknown, n: number): string[] => {
   });
 };
 
+/** A page's saved colors, or a blank page when there are none or they no longer fit the art. */
 export const loadColors = (pageId: string, n: number): string[] => normalize(parse(read(`page:${pageId}`)), n);
+/** Remembers a page's colors on this device. */
 export const saveColors = (pageId: string, colors: readonly string[]): void => write(`page:${pageId}`, JSON.stringify(colors));
 
 type Pref = 'last' | 'color';
+/** Last page or crayon; null when unknown. */
 export const loadPref = (key: Pref): string | null => read(key);
+/** Remembers the last page or crayon. */
 export const savePref = (key: Pref, value: string): void => write(key, value);

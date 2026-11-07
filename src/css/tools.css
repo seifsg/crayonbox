@@ -41,9 +41,18 @@
 #save { --c: #8ce99a; }
 #print { --c: #e0aaff; }
 
+/* Sideways phones: five tools must fit the height (safe areas included), up to 64 px each; the logo makes room. */
 @media (orientation: landscape) and (max-height: 520px) {
   :root {
-    --tool: 56px;
+    --tool: min(64px, calc((100dvh - 48px - env(safe-area-inset-top) - env(safe-area-inset-bottom)) / 5));
     --lift: 4px;
+  }
+
+  .tools {
+    gap: 6px;
+  }
+
+  .tools .brand {
+    display: none;
   }
 }

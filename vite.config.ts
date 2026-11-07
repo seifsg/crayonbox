@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
+/** One manifest icon entry; the type follows the file extension. */
 const icon = (src: string, sizes: string, purpose = 'any') => ({ src, sizes, type: src.endsWith('.svg') ? 'image/svg+xml' : 'image/png', purpose });
 
 // Build + dev server; the PWA plugin writes the manifest and a precaching service worker so every page works offline.

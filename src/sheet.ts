@@ -38,6 +38,7 @@ export class Sheet {
     return back;
   }
 
+  /** Applies a non-empty step and records it for Undo. */
   #apply(edits: Edit[]): Edit[] {
     if (edits.length) {
       this.#set(edits);
@@ -46,6 +47,7 @@ export class Sheet {
     return edits;
   }
 
+  /** Writes edits into the color list (no history). */
   #set(edits: readonly Edit[]): void {
     for (const [i, , to] of edits) this.colors[i] = to;
   }

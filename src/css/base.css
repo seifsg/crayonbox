@@ -45,10 +45,11 @@ button {
   outline-offset: 4px;
 }
 
+/* Uses `rotate` (not transform) so it stacks with the crayon's `translate` lift. */
 @keyframes wiggle {
-  0%, 100% { transform: rotate(0); }
-  25% { transform: rotate(-9deg); }
-  75% { transform: rotate(9deg); }
+  0%, 100% { rotate: 0deg; }
+  25% { rotate: -9deg; }
+  75% { rotate: 9deg; }
 }
 
 @keyframes pop {

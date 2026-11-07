@@ -39,7 +39,7 @@ export const renderPalette = (host: HTMLElement, onPick: (hex: string) => void):
     for (const b of buttons) {
       const on = b.dataset['hex'] === hex;
       b.setAttribute('aria-pressed', String(on));
-      if (on) b.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
+      if (on) b.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     }
   };
 };
